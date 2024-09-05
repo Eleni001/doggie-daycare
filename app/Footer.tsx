@@ -63,14 +63,14 @@ export default function Footer() {
           <Stack align={"flex-start"}>
             <ListHeader>Book or Apply</ListHeader>
             <Box as="a" href={"#"}>
-              Daycare Application
+              Applications
             </Box>
             <Box as="a" href={"#"}>
               Book for Daycare
             </Box>
             <Stack direction={"row"} align={"center"} spacing={2}>
               <Box as="a" href={"#"}>
-                Book for Dog Bath
+                Book Dog Courses
               </Box>
               <Tag size={"sm"} bg="#006838" ml={2} color={"white"}>
                 New
@@ -78,6 +78,9 @@ export default function Footer() {
             </Stack>
             <Box as="a" href={"#"}>
               Book for Claw Trimming
+            </Box>
+            <Box as="a" href={"#"}>
+              Book Dog Bath
             </Box>
           </Stack>
           <Stack align={"flex-start"}>
