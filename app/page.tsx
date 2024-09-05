@@ -1,9 +1,10 @@
 import { Box, Text } from "@chakra-ui/react";
+import Navbar from "./Navbar";
 
 export default function Home() {
   return (
     <Box>
-      <Text>Home</Text>
+      <Navbar />
     </Box>
   );
 }
