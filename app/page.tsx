@@ -1,10 +1,5 @@
-import { Box, Text } from "@chakra-ui/react";
-import Navbar from "./Navbar";
+import { Box } from "@chakra-ui/react";
 
 export default function Home() {
-  return (
-    <Box>
-      <Navbar />
-    </Box>
-  );
+  return <Box></Box>;
 }

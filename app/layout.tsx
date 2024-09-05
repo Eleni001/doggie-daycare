@@ -1,6 +1,9 @@
+import { Box } from "@chakra-ui/react";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Footer from "./Footer";
 import "./globals.css";
+import Navbar from "./Navbar";
 import { Providers } from "./providers";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -18,7 +21,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Providers>{children}</Providers>
+        <Providers>
+          <Navbar />
+          <Box minH="100vh" as="main">
+            {children}
+          </Box>
+          <Footer />
+        </Providers>
       </body>
     </html>
   );

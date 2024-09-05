@@ -40,12 +40,14 @@ export default function Navbar() {
 
   return (
     <>
-      <Box px={4} m={12}>
+      <Box /* px={4} mt={12} */ my={12}>
         <Flex
           direction={{ base: "row", md: "column" }}
           h={{ base: "auto", md: 16 }}
           alignItems={{ base: "center", md: "center" }}
           justifyContent={{ base: "space-between", md: "center" }}
+          borderBottom="1px solid"
+          borderColor="#939598"
         >
           <Box
             display="flex"
@@ -82,6 +84,7 @@ export default function Navbar() {
             display={{ base: "none", md: "flex" }}
             mt={{ base: 4, md: 0 }}
             alignSelf={{ base: "flex-end", md: "center" }}
+            mb={-4}
           >
             {Links.map((link) => (
               <NavLink key={link}>{link}</NavLink>
