@@ -8,6 +8,7 @@ import {
   Heading,
   Stack,
   Text,
+  useBreakpointValue,
   useColorModeValue,
 } from "@chakra-ui/react";
 
@@ -26,7 +27,9 @@ const TestimonialContent = (props: Props) => {
 
   return (
     <Stack
-      bg={useColorModeValue("white", "gray.800")}
+      bg={useColorModeValue("white", "#939598")}
+      fontSize={"15px"}
+      fontFamily={"body"}
       boxShadow={"lg"}
       p={8}
       rounded={"xl"}
@@ -58,7 +61,7 @@ const TestimonialHeading = (props: Props) => {
   const { children } = props;
 
   return (
-    <Heading as={"h3"} fontSize={"xl"}>
+    <Heading as={"h3"} fontSize={"15px"}>
       {children}
     </Heading>
   );
@@ -68,11 +71,7 @@ const TestimonialText = (props: Props) => {
   const { children } = props;
 
   return (
-    <Text
-      textAlign={"center"}
-      color={useColorModeValue("gray.600", "gray.400")}
-      fontSize={"sm"}
-    >
+    <Text textAlign={"center"} color={"#333333"} fontSize={"15px"}>
       {children}
     </Text>
   );
@@ -80,7 +79,13 @@ const TestimonialText = (props: Props) => {
 
 const TestimonialAvatar = ({ src, name }: { src: string; name: string }) => {
   return (
-    <Flex align={"center"} mt={8} direction={"column"}>
+    <Flex
+      align={"center"}
+      mt={8}
+      direction={"column"}
+      fontFamily={"body"}
+      fontSize={"15px"}
+    >
       <Avatar src={src} mb={2} />
       <Stack spacing={-1} align={"center"}>
         <Text fontWeight={600}>{name}</Text>
@@ -94,7 +99,9 @@ export default function Testemonials() {
     <Box bg={"#939598"}>
       <Container maxW={"7xl"} py={16} as={Stack} spacing={12}>
         <Stack spacing={0} align={"center"}>
-          <Heading>Our Clients Speak</Heading>
+          <Heading fontSize={useBreakpointValue({ base: "24px", md: "39px" })}>
+            Our Clients Speak
+          </Heading>
           {/* <Text>We have been working with clients around the world</Text> */}
         </Stack>
         <Stack

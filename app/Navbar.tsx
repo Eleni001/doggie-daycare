@@ -7,6 +7,7 @@ import {
   HStack,
   IconButton,
   Image,
+  Text,
   useDisclosure,
 } from "@chakra-ui/react";
 
@@ -20,18 +21,19 @@ const NavLink = (props: Props) => {
   const { children } = props;
 
   return (
-    <Box
+    <Text
       as="a"
       px={2}
       py={1}
       rounded={"md"}
+      fontFamily="body"
       _hover={{
         color: "#006838",
       }}
       href={"#"}
     >
       {children}
-    </Box>
+    </Text>
   );
 };
 
@@ -40,7 +42,7 @@ export default function Navbar() {
 
   return (
     <>
-      <Box /* px={4} mt={12} */ my={12}>
+      <Box my={12}>
         <Flex
           direction={{ base: "row", md: "column" }}
           h={{ base: "auto", md: 16 }}
@@ -63,6 +65,7 @@ export default function Navbar() {
               width="auto"
               objectFit="contain"
               maxW="100%"
+              px={4}
             />
           </Box>
 
@@ -85,6 +88,7 @@ export default function Navbar() {
             mt={{ base: 4, md: 0 }}
             alignSelf={{ base: "flex-end", md: "center" }}
             mb={-4}
+            fontSize={"15px"}
           >
             {Links.map((link) => (
               <NavLink key={link}>{link}</NavLink>
@@ -100,7 +104,12 @@ export default function Navbar() {
             justifyContent="center"
             w="100%"
           >
-            <Flex direction="column" align="center" justify="center">
+            <Flex
+              direction="column"
+              align="center"
+              justify="center"
+              fontSize={"15px"}
+            >
               {Links.map((link) => (
                 <NavLink key={link}>{link}</NavLink>
               ))}

@@ -19,6 +19,7 @@ export default function Hero() {
       }
       backgroundSize={"cover"}
       backgroundPosition={"center center"}
+      fontFamily="body"
     >
       <VStack
         w={"full"}
@@ -31,17 +32,16 @@ export default function Hero() {
             color={"white"}
             fontWeight={700}
             lineHeight={1.2}
-            fontSize={useBreakpointValue({ base: "3xl", md: "4xl" })}
+            fontSize={useBreakpointValue({ base: "24px", md: "39px" })}
           >
             Doggie Daycare, Where Your Dog Feels Home Away From Home!
           </Text>
-          <Stack direction={"row"}>
+          <Stack direction={"row"} fontSize={"15px"}>
             <Button bg={"#006838"} color={"white"} _hover={{ bg: "blue.500" }}>
               Application
             </Button>
             <Button
               bg={"#006838"}
-              /* rounded={"full"} */
               color={"white"}
               _hover={{ bg: "whiteAlpha.500" }}
             >

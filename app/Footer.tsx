@@ -9,12 +9,17 @@ import {
   Stack,
   Tag,
   Text,
+  useBreakpointValue,
 } from "@chakra-ui/react";
 import { ReactNode } from "react";
 
 const ListHeader = ({ children }: { children: ReactNode }) => {
   return (
-    <Text fontWeight={"500"} fontSize={"lg"} mb={2}>
+    <Text
+      fontWeight={useBreakpointValue({ base: "bold", md: "regular" })}
+      fontSize={useBreakpointValue({ base: "15px", md: "24px" })}
+      mb={2}
+    >
       {children}
     </Text>
   );
@@ -23,12 +28,12 @@ const ListHeader = ({ children }: { children: ReactNode }) => {
 export default function Footer() {
   return (
     <Box
-      /* bg={useColorModeValue('gray.50', 'gray.900')} */
       color={"#333333"}
       borderTop="1px solid"
       borderColor="#939598"
+      fontFamily={"body"}
     >
-      <Container as={Stack} maxW={"6xl"} py={10}>
+      <Container as={Stack} maxW={"6xl"} py={10} fontSize={"15px"}>
         <SimpleGrid columns={{ base: 1, sm: 2, md: 4 }} spacing={8}>
           <Stack align={"flex-start"}>
             <ListHeader>Company</ListHeader>

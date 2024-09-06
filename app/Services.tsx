@@ -9,6 +9,7 @@ import {
   SimpleGrid,
   Stack,
   Text,
+  useBreakpointValue,
 } from "@chakra-ui/react";
 import { ReactElement } from "react";
 import { FaShower } from "react-icons/fa";
@@ -38,8 +39,12 @@ const Feature = ({ title, text, icon }: FeatureProps) => {
       >
         {icon}
       </Flex>
-      <Text fontWeight={600}>{title}</Text>
-      <Text color={"gray.600"}>{text}</Text>
+      <Text fontWeight={"bold"} fontFamily={"body"}>
+        {title}
+      </Text>
+      <Text color={"#333333"} fontFamily={"body"}>
+        {text}
+      </Text>
     </Stack>
   );
 };
@@ -47,9 +52,22 @@ const Feature = ({ title, text, icon }: FeatureProps) => {
 export default function SimpleThreeColumns() {
   return (
     <Box p={14}>
-      <Stack spacing={4} as={Container} maxW={"3xl"} textAlign={"center"}>
-        <Heading fontSize={"3xl"}>Let Us Take Care Of Your Dog</Heading>
-        <Text color={"gray.600"} fontSize={"xl"} py={8}>
+      <Stack
+        spacing={4}
+        as={Container}
+        maxW={"3xl"}
+        textAlign={"center"}
+        fontFamily={"body"}
+      >
+        <Heading fontSize={useBreakpointValue({ base: "24px", md: "39px" })}>
+          Let Us Take Care Of Your Dog
+        </Heading>
+        <Text
+          color={"#333333"}
+          fontSize={useBreakpointValue({ base: "15px", md: "24px" })}
+          fontWeight={useBreakpointValue({ base: "bold", md: "regular" })}
+          py={8}
+        >
           Do you want to give your dog something extra while it is with us? We
           also have the following services
         </Text>
