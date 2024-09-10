@@ -36,14 +36,20 @@ export default function Hero() {
           >
             Doggie Daycare, Where Your Dog Feels Home Away From Home!
           </Text>
-          <Stack direction={"row"} fontSize={"15px"}>
-            <Button bg={"#006838"} color={"white"} _hover={{ bg: "blue.500" }}>
+          <Stack direction={"row"}>
+            <Button
+              bg={"#006838"}
+              color={"white"}
+              fontSize={"15px"}
+              _hover={{ bg: "#939598" }}
+            >
               Application
             </Button>
             <Button
               bg={"#006838"}
               color={"white"}
-              _hover={{ bg: "whiteAlpha.500" }}
+              fontSize={"15px"}
+              _hover={{ bg: "#939598" }}
             >
               Bookings
             </Button>

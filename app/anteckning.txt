@@ -1,0 +1,2 @@
+* förvandlat pt till px och avrundat använt värde.
+* Marion finns inte att installera så nämast font är basker..

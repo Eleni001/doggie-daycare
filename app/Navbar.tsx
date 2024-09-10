@@ -27,6 +27,7 @@ const NavLink = (props: Props) => {
       py={1}
       rounded={"md"}
       fontFamily="body"
+      color={"#333333"}
       _hover={{
         color: "#006838",
       }}
@@ -71,7 +72,7 @@ export default function Navbar() {
 
           <IconButton
             bg="white"
-            color="green"
+            color="#006838"
             size={"lg"}
             icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
             aria-label={"Open Menu"}
